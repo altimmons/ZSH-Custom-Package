@@ -12,22 +12,27 @@ export PATH=usr/local/bin:$HOME/.local/bin:$HOME/bin:$PATH
 
 #todo make sure this works if parent changes.
 ZSH_CUSTOM=$HOME/.zshconfig
+ZSH=$ZSH_CUSTOM
+
+export LANG=en_US.UTF-8
+export XDG_CONFIG_HOME=$ZSH_CUSTOM/config
 # ZSH_CUSTOM
 
 # 3 steps:
 # Using Antigen in your .zshrc consists of three major parts.
-# 
+
     # source the previously downloaded antigen.zsh file
         # use the antigen functions to load desired stuff into your ZSH
             # Commit your configuration by invoking antigen apply
-            # 
-source $ZSH_CUSTOM/p10k/powerline10k.zsh-theme
+# source $ZSH_CUSTOM/p10k/powerline10k.zsh-theme
+#source ~/.zshconfig/p10k/powerline10k.zsh-theme
+source /home/andy/.zshconfig/p10k/powerline10k.zsh-theme
 
 # 1 -source antigen
-source $ZSH_CUSTOM/antigen/antigen.sh
+# source $ZSH_CUSTOM/antigen/antigen.sh
+source ~/.zshconfig/antigen/antigen.sh
 
-export LANG=en_US.UTF-8
-export XDG_CONFIG_HOME=$ZSH_CUSTOM/config 
+
 
 #ZSH_CUSTOM = $ZSH_CONFIG
 
@@ -65,3 +70,17 @@ antigen bundle completion
 # NNN_LOCKER='saidar -c'	terminal locker
 # NNN_MCLICK='^R' 7zkey emulated by middle mouse click
 # NO_COLOR=1 8	disable ANSI color output
+
+# 
+# nnn_cd()
+# {
+	    # if ! [ -z "$NNN_PIPE" ]; then
+	            # printf "%s\0" "0c${PWD}" > "${NNN_PIPE}" !&
+	                # fi
+	                # }
+# 
+	                # trap nnn_cd EXIT
+# }
+
+
+#[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
