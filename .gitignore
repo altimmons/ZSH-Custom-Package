@@ -1,1 +1,9 @@
 /coreutils-8.32/**
+
+#at this time dont want all this in the repo
+#should follow the download and build instructions.
+#of course this will require build-essentials
+/timewarrior/**
+/.cache/**
+/config/micro/** 
+## for now exclude micro plugins unless one reveals itself as impossible to live without,.

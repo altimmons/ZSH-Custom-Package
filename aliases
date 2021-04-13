@@ -34,11 +34,18 @@ alias lc='colorls -laC --sd'
 
 
 #make sure this exists before going all in
-if [[-x $(which advcp)]]; then alias cp '/usr/local/bin/advcp -g'; fi;
-if [[-x $(which cpg)]]; then alias cp '/usr/local/bin/cpg -g'; fi;
-if [[-x $(which advmv)]]; then alias cp '/usr/local/bin/advmv -g'; fi;
-if [[-x $(which mvg)]]; then alias cp '/usr/local/bin/mvg -g'; fi;
+
+## note this doesnt work
+
+# if [[-x $(which advcp)]]; then alias cp '/usr/local/bin/advcp -g'; fi;
+## but this does 
+#  if_[[_-x $( which cpg )_]]; then echo 'ok'; fi;
+#---the white space is delimiter, other things bsh cant handle  the echo is just to test/.  The critical spaces are replaced by `_`
+if [[ -x $(which advcp) ]]; then alias cp '/usr/local/bin/advcp -g'; fi;
+if [[ -x $(which cpg) ]]; then alias cp '/usr/local/bin/cpg -g'; fi;
+if [[ -x $(which advmv) ]]; then alias cp '/usr/local/bin/advmv -g'; fi;
+if [[ -x $(which mvg) ]]; then alias cp '/usr/local/bin/mvg -g'; fi;
 # alias cp '/usr/local/bin/cpg -g'
 # alias mv '/usr/local/bin/advmv -g'
 # alias mv '/usr/local/bin/mvg -g'
-if [[-x $(which ccat)]]; then alias cat '/usr/local/bin/ccat'; fi;
+if [[ -x $(which ccat) ]]; then alias cat '/usr/local/bin/ccat'; fi;
