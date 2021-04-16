@@ -32,3 +32,6 @@
 [submodule ".plugins/zsh-users/zsh-history-substring-search"]
 	path = .plugins/zsh-users/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "lolcat"]
+	path = lolcat
+	url = https://github.com/busyloop/lolcat
