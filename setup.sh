@@ -50,7 +50,7 @@ function heredocComment($comment)
 BLKCMT
 
 #\t#-dep for \n\t$1\n  ([a-z\d-]+) 
- apt install <<-EODEPENDENCY_LIST
+# apt install <<-EODEPENDENCY_LIST   #=====================fix me ^use comment cmds above.
 	#-dep for  Everything
 	git
 	#-dep for 
@@ -79,6 +79,9 @@ BLKCMT
 	uuid-dev
 	#-dep for 
 	build-essential
+	# - 
+	lolcat
+
 EODEPENDENCY_LIST
 
 
@@ -177,8 +180,8 @@ export
 
 
 #add advcp and advmove #add alias in aliases file
-sudo ln -s $ZSH_CUSTOM/advcpmv/advcp $HOME/.local/bin/cpg
-sudo ln -s $ZSH_CUSTOM/advcpmv/advmv $HOME/.local/bin/mvg
+sudo ln -s $ZSH_CUSTOM/.assets/advcpmv/advcp $HOME/.local/bin/cpg
+sudo ln -s $ZSH_CUSTOM/.assets/advcpmv/advmv $HOME/.local/bin/mvg
 echo alias cp 'cpg -g' >> ~/.bashrc
 echo alias mv 'mvg -g' >> ~/.bashrc
 

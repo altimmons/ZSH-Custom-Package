@@ -1,3 +1,5 @@
+#! /bin/zsh
+# Andy's Custom ZSH Install
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,9 +7,33 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 DEBUG=true
-#! /bin/zsh
 
-# Andy's Custom ZSH Install
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 #todo check if everything is setup ? exprted var?
 #this does eomething similar.  downloads if not existent.
@@ -35,7 +61,7 @@ ZSH_CONFIG_OHMYZSH_PLUGINS=$ZSH_CONFIG_OHMYZSH/plugins
 ZSH_CUSTOM=$HOME/.zshconfig
 ZSH_CUSTOM_PLUGINS=$ZSH_CUSTOM/.plugins/
 ZSH_CUS_ZSH_USERS=$ZSH_CUSTOM_PLUGINS/zsh-users
-ZSH_CUST_CONFIG==$ZSH_CUSTOM/config
+ZSH_CUST_CONFIG=$ZSH_CUSTOM/config
 #ZSH may need to point to ohmyzsh dir
 ZSH=$ZSH_CUSTOM
 
@@ -92,8 +118,8 @@ antigen bundle $ZSH_CONFIG_OHMYZSH/plugins/<<-BUNDLES
 BUNDLES
 
 if $DEBUG; then cat <<< "2" ; fi;
-for d in $ZSH_CUS_ZSH_USERS/*; do 
-  antigen bundle  ${d} --no-local-clone 
+for d in $ZSH_CUS_ZSH_USERS/*; do
+  antigen bundle  ${d} --no-local-clone
   if $DEBUG; then echo load...$d; fi;
   # if [[$debug]]
 done
@@ -228,7 +254,7 @@ ssh)          fzf "$@" --preview 'dig {}' ;;
 *)            fzf "$@" ;;
 esac
 }
-  
+
 DISABLE_THIS_FOR_NOW
 
 setup_color() {
@@ -274,3 +300,8 @@ source $ZSH_CUSTOM/.fzf-autosize/auto-sized-fzf.sh
 #FZF_DEFAULT_OPTS="$(fzf_sizer_preview_window_settings)"
 #export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 # fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
+
+sleep 2
+
+clear
+now

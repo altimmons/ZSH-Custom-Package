@@ -1,5 +1,6 @@
 #! /bin/zsh
 
+echo "ToDo remove duplicates from .zshconfig/aliases"
 alias sagi='sudo apt-get install'
 alias sagu='sudo apt-get update'
 alias sas='sudo apt search'
@@ -22,7 +23,9 @@ alias cd...='cd ../..'
 alias cd....='cd ../../..'
 alias pd=pushd
 alias ud=popd
-
+alias ll="ls -lsFup --color=yes"
+alias sagi='sudo apt-get install'
+alias sas='sudo apt search'
 
 alias lf='colorls -lf'
 alias lfa='colorls -lfa'
@@ -32,7 +35,26 @@ alias la='colorls -a --sd'
 alias l='colorls --sd'
 alias lc='colorls -laC --sd'
 
+alias cd..='cd ..'
+alias l='ls -alg'
+alias ren='mv \!:1 \!:2'
+alias s='sudo'
+alias lsa='ls -ahNst --color'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls='ls --color=auto'
+	alias dir='dir --color=auto'
+	alias vdir='vdir --color=auto'
+
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
+fi
 #make sure this exists before going all in
 
 ## note this doesnt work

@@ -26,14 +26,31 @@ https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 https://github.com/zsh-users
 https://github.com/zsh-users/antigen/wiki/Commands
 https://github.com/belak/zsh-utils
-
+https://timewarrior.net/docs/install/
+https://www.baeldung.com/linux/heredoc-herestring
+https://ohmyz.sh/
+https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html#chap_12
+https://github.com/ohmyzsh/ohmyzsh
+https://github.com/owenthereal/ccat
+https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
+https://timewarrior.net/
+https://github.com/zsh-users/antigen/wiki/Commands
+https://github.com/romkatv/powerlevel10k#manual
 A custom terminal configuration
+jarun_nnn_ n³ The unorthodox terminal file manager.html https://github.com/jarun/nnn
+https://github.com/jarun/advcpmv
+
+https://www.tecmint.com/cat-command-output-with-syntax-highlighting-or-color/
+https://github.com/zyedidia/micro/blob/master/runtime/help/plugins.md
+https://github.com/zsh-users/antigen/wiki/Commands
+
 
 FZF_COMPLETION_OPTS
 fzf_default_completion
 
 ## Aliases 
-
+[] check these too
+ https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
 A random list online, check for good ones
 
 ## Things to explore
