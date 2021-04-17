@@ -6,6 +6,8 @@
 .zprofile
 .zlogin
 
+#todo update this project.
+git clone --recurse-submodules https://github.com/chaconinc/MainProject
 
 #======================Dependencies Install
 #++

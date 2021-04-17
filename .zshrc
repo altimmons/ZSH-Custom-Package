@@ -304,4 +304,4 @@ source $ZSH_CUSTOM/.fzf-autosize/auto-sized-fzf.sh
 sleep 2
 
 clear
-now
+$ZSH_CUSTOM/.assets/now

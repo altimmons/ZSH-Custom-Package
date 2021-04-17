@@ -23,7 +23,7 @@ Vsize=30 #a variable I made...
 echo " "
 # Replace Edmonton with your city name, GPS, etc. See: curl wttr.in/:help
 # curl wttr.in/28211?2 --silent --max-time 3
-curl wttr.in/CLT?2 --silent --max-time 3
+curl wttr.in/CLT?3 --silent --max-time 3
 # Timeout #. Increase for slow connection---^
 #?2= 2 day report, ?1 = 1 day report
 #echo " "
@@ -134,7 +134,7 @@ screenfetch > /tmp/terminal
 tput sc
 tput cuf 40
 tput cud 5
-toilet -f pagga -F border -F gay Welcome Back Andy! > /tmp/terminal
+toilet -f 07734 -F border -F gay:180 Welcome Back Andy! > /tmp/terminal
 tput rc
 exit 0
 

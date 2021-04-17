@@ -21,7 +21,7 @@
 	path = taskwarrior
 	url = https://github.com/GothenburgBitFactory/taskwarrior.git
 [submodule "plugins/zsh-users/zsh-syntax-highlighting"]
-	path = plugins/zsh-users/zsh-syntax-highlighting
+	path = .plugins/zsh-users/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule ".plugins/zsh-users/zsh-completions"]
 	path = .plugins/zsh-users/zsh-completions
@@ -35,3 +35,12 @@
 [submodule "lolcat"]
 	path = lolcat
 	url = https://github.com/busyloop/lolcat
+[submodule ".plugins/zsh-syntax-highlighting"]
+	path = .plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh-syntax-highlighting"]
+	path = zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "/home/andy/.zshconfig/.plugins/zsh-users/zsh-syntax-highlighting"]
+	path = /home/andy/.zshconfig/.plugins/zsh-users/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
