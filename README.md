@@ -15,9 +15,12 @@ To Do
 [] checkout https://github.com/romkatv/zsh4humans
 [] why was zsh-syntax-highlighting index deleted? Do I need to care?
 
+
+
 Sources
 _____
-
+https://github.com/rothgar/awesome-tmux#cheatsheets
+https://www.byobu.org/
 https://joshldavis.com/2014/07/26/oh-my-zsh-is-a-disease-antigen-is-the-vaccine/
 https://github.com/brandon-fryslie/rad-shell
 https://github.com/sharkdp/bat
@@ -48,6 +51,7 @@ https://github.com/zsh-users/antigen/wiki/Commands
 FZF_COMPLETION_OPTS
 fzf_default_completion
 
+
 ## Aliases 
 [] check these too
  https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
@@ -60,6 +64,39 @@ A random list online, check for good ones
 [Parameter-Expansion-Flags](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags)
 [14 Expansion](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Expansion)
 
+
+other apps
+
+Sample Apps:
+ - atop		# xxx Root
+ - bmon		# DONE
+ - cmatrix	# DONE
+ - dnstop	# xxx Root
+ - ethstatus
+ - glances
+ - htop
+ - ifstat
+ - iotop
+ - iptotal
+ - iptraf-ng
+ - itop
+ - jnettop
+ - kerneltop
+ - latencytop
+ - logtop
+ - netmrg
+ - nload
+ - nmon
+ - ntop
+ - powertop
+ - sagan
+ - slurm
+ - snetz
+ - top
+ - tiptop
+ - vnstat
+
+ 
 alias e='vi'
 alias egrep='grep -E'
 alias ewformat='fdformat -n /dev/fd0u1743; ewfsck'

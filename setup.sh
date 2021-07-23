@@ -44,7 +44,7 @@ git clone --recurse-submodules https://github.com/chaconinc/MainProject
 
 #======================Dependencies Install
 #++
- apt install git python3 pip ruby ruby-dev xsel xclip pkg-config libncursesw5-dev libreadline-dev libgnutls28-dev uuid-dev build-essential
+ apt install git python3 pip ruby ruby-dev xsel xclip pkg-config libncursesw5-dev libreadline-dev libgnutls28-dev uuid-dev build-essential gsed 
 
 #this actually a great spot for heredoc
 #([a-z\d-]+)  -> # |$1 | required by                                   | \n
@@ -68,6 +68,40 @@ git clone --recurse-submodules https://github.com/chaconinc/MainProject
 $com=function($str){return '';};
 
 function com($str){return '';};
+
+
+##!optional list of useful software
+#apt install atop bmon cmatrix dnstop ethstatus glances htop ifstat iotop iptotal iptraf-ng itop jnettop kerneltop latencytop logtop netmrg nload nmon ntop powertop sagan slurm snetz top tiptop vnstat
+
+:<<APPS
+- atop
+- bmon
+- cmatrix
+- dnstop
+- ethstatus
+- glances
+- htop
+- ifstat
+- iotop
+- iptotal
+- iptraf-ng
+- itop
+- jnettop
+- kerneltop
+- latencytop
+- logtop
+- netmrg
+- nload
+- nmon
+- ntop
+- powertop
+- sagan
+- slurm
+- snetz
+- top
+- tiptop
+- vnstat
+APPS
 
 # https://stackoverflow.com/questions/5679813/need-to-put-code-comments-inside-a-heredoc
 :<<BLKCMT
@@ -121,10 +155,10 @@ EODEPENDENCY_LIST
 
 
 # May have other dependencies- I know I fought with it in the past.
-pip3 install bpytop
+pip3 install bpytop python-newt
 
 #requires elevation & ruby & ruby-dev
- gem install colorls -- --use-system-libraries
+gem install colorls -- --use-system-libraries
 
 ZSH_CUSTOM=$HOME/.zshconfig
 
@@ -142,6 +176,36 @@ git submodule add https://github.com/bigH/auto-sized-fzf.git $ZSH_CUSTOM/.fzf-au
 # add pl10k
 git submodule add --depth=1 https://github.com/romkatv/powerlevel10k.git  p10k
 ###############
+git submodule add --depth=1 https://github.com/dustinkirkland/byobu.git ./byobu
+:<<BYOBU_INSTRUCTIONS
+	Configure:
+
+	./configure --prefix="$HOME/byobu"
+
+	OPTIONAL : You may use python from your environment, rather than from your distro
+
+	echo "export BYOBU_PYTHON='/usr/bin/env python'" >> $HOME/.bashrc
+
+	Build: make
+
+	Install:
+
+	make install
+
+	Update your PATH and BYOBU_PREFIX environment variables
+
+	echo "export PATH=$HOME/byobu/bin:$PATH" >> $HOME/.bashrc . $HOME/.bashrc
+
+	Run:
+
+	byobu
+
+	Note that you will need to have a few dependencies installed:
+
+	tmux >= 1.5 and screen
+	python-newt (if you want to use Byobu's configuration utility)
+	gsed (if your sed implementation doesn't support -i)
+BYOBU_INSTRUCTIONS
 
 ## Add zshusers plugin
 #make sure we are where we expect
@@ -151,6 +215,7 @@ cd $ZSH_CUSTOM
 #add fonts to .assets
 mkdir .assets
 mkdir .plugins && cd .plugins 
+
 ZSH_CUSTOM_PLUGINS=$ZSH_CUSTOM/.plugins/
 
 mkdir zsh-users && cd zsh-users
