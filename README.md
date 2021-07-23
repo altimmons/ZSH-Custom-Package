@@ -19,33 +19,34 @@ To Do
 
 Sources
 _____
-https://github.com/rothgar/awesome-tmux#cheatsheets
-https://www.byobu.org/
-https://joshldavis.com/2014/07/26/oh-my-zsh-is-a-disease-antigen-is-the-vaccine/
-https://github.com/brandon-fryslie/rad-shell
-https://github.com/sharkdp/bat
-https://github.com/romkatv/zsh4humans
-https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
-https://github.com/zsh-users
-https://github.com/zsh-users/antigen/wiki/Commands
-https://github.com/belak/zsh-utils
-https://timewarrior.net/docs/install/
-https://www.baeldung.com/linux/heredoc-herestring
-https://ohmyz.sh/
-https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html#chap_12
-https://github.com/ohmyzsh/ohmyzsh
-https://github.com/owenthereal/ccat
-https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
-https://timewarrior.net/
-https://github.com/zsh-users/antigen/wiki/Commands
-https://github.com/romkatv/powerlevel10k#manual
-A custom terminal configuration
-jarun_nnn_ n³ The unorthodox terminal file manager.html https://github.com/jarun/nnn
-https://github.com/jarun/advcpmv
 
-https://www.tecmint.com/cat-command-output-with-syntax-highlighting-or-color/
-https://github.com/zyedidia/micro/blob/master/runtime/help/plugins.md
-https://github.com/zsh-users/antigen/wiki/Commands
+- https://github.com/rothgar/awesome-tmux#cheatsheets
+- https://www.byobu.org/
+- https://joshldavis.com/2014/07/26/oh-my-zsh-is-a-disease-antigen-is-the-vaccine/
+- https://github.com/brandon-fryslie/rad-shell
+- https://github.com/sharkdp/bat
+- https://github.com/romkatv/zsh4humans
+- https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
+- https://github.com/zsh-users
+- https://github.com/zsh-users/antigen/wiki/Commands
+- https://github.com/belak/zsh-utils
+- https://timewarrior.net/docs/install/
+- https://www.baeldung.com/linux/heredoc-herestring
+- https://ohmyz.sh/
+- https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html#chap_12
+- https://github.com/ohmyzsh/ohmyzsh
+- https://github.com/owenthereal/ccat
+- https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
+- https://timewarrior.net/
+- https://github.com/zsh-users/antigen/wiki/Commands
+- https://github.com/romkatv/powerlevel10k#manual
+- A custom terminal configuration
+- jarun_nnn_ n³ The unorthodox terminal file manager.html https://github.com/jarun/nnn
+- https://github.com/jarun/advcpmv
+- 
+- https://www.tecmint.com/cat-command-output-with-syntax-highlighting-or-color/
+- https://github.com/zyedidia/micro/blob/master/runtime/help/plugins.md
+- https://github.com/zsh-users/antigen/wiki/Commands
 
 
 FZF_COMPLETION_OPTS
@@ -59,261 +60,10 @@ A random list online, check for good ones
 
 ## Things to explore
 
-[Parameter-Expansion](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion)
+- [Parameter-Expansion](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion)
 
-[Parameter-Expansion-Flags](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags)
-[14 Expansion](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Expansion)
-
-
-other apps
-
-Sample Apps:
- - atop		# xxx Root
- - bmon		# DONE
- - cmatrix	# DONE
- - dnstop	# xxx Root
- - ethstatus
- - glances
- - htop
- - ifstat
- - iotop
- - iptotal
- - iptraf-ng
- - itop
- - jnettop
- - kerneltop
- - latencytop
- - logtop
- - netmrg
- - nload
- - nmon
- - ntop
- - powertop
- - sagan
- - slurm
- - snetz
- - top
- - tiptop
- - vnstat
-
- 
-alias e='vi'
-alias egrep='grep -E'
-alias ewformat='fdformat -n /dev/fd0u1743; ewfsck'
-alias fgrep='grep -F'
-alias ftp='ncftp -d15'
-alias h='history 10'
-alias fformat='fdformat /dev/fd0H1440'
-alias j='jobs -l'
-alias ksane='setterm -reset'
-alias ls='ls -F --color=auto'
-alias m='less'
-alias md='mkdir'
-alias od='od -Ax -ta -txC'
-alias p='pstree -p'
-alias ping='ping -vc1'
-alias sb='ssh blubber'
-alias sl='ls'
-alias ss='ssh octarine'
-alias tar='gtar'
-alias tmp='cd /tmp'
-alias unaliasall='unalias -a'
-alias vi='eval `resize`;vi'
-alias vt100='export TERM=vt100'
-alias which='type'
-alias xt='xterm -bg black -fg white &'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias PAGER='less -r'
-alias Txterm='export TERM=xterm'
-#need this so that that backspace and all the usual keys work.
-alias XARGS='xargs -r'
-alias cdrecord='cdrecord -dev 0,0,0 -speed=8'
-
-
-
-set -o output
-
-noaliases             off
-aliasfuncdef          off
-allexport             off
-noalwayslastprompt    off
-alwaystoend           off
-appendcreate          off
-noappendhistory       off
-autocd                off
-autocontinue          off
-noautolist            off
-noautomenu            off
-autonamedirs          off
-noautoparamkeys       off
-noautoparamslash      off
-autopushd             off
-noautoremoveslash     off
-autoresume            off
-nobadpattern          off
-nobanghist            off
-nobareglobqual        off
-bashautolist          off
-bashrematch           off
-nobeep                off
-nobgnice              off
-braceccl              off
-bsdecho               off
-nocaseglob            off
-nocasematch           off
-cbases                off
-cdablevars            off
-chasedots             off
-chaselinks            off
-nocheckjobs           off
-noclobber             off
-combiningchars        off
-completealiases       off
-completeinword        off
-continueonerror       off
-correct               off
-correctall            off
-cprecedences          off
-cshjunkiehistory      off
-cshjunkieloops        off
-cshjunkiequotes       off
-cshnullcmd            off
-cshnullglob           off
-nodebugbeforecmd      off
-dvorak                off
-emacs                 off
-noequals              off
-errexit               off
-errreturn             off
-noevallineno          off
-noexec                off
-extendedglob          off
-extendedhistory       off
-noflowcontrol         off
-forcefloat            off
-nofunctionargzero     off
-noglob                off
-noglobalexport        off
-noglobalrcs           off
-globassign            off
-globcomplete          off
-globdots              off
-globstarshort         off
-globsubst             off
-nohashcmds            off
-nohashdirs            off
-hashexecutablesonly   off
-nohashlistall         off
-histallowclobber      off
-nohistbeep            off
-histexpiredupsfirst   off
-histfcntllock         off
-histfindnodups        off
-histignorealldups     off
-histignoredups        off
-histignorespace       off
-histlexwords          off
-histnofunctions       off
-histnostore           off
-histreduceblanks      off
-nohistsavebycopy      off
-histsavenodups        off
-histsubstpattern      off
-histverify            off
-nohup                 off
-ignorebraces          off
-ignoreclosebraces     off
-ignoreeof             off
-incappendhistory      off
-incappendhistorytime  off
-interactive           on
-interactivecomments   off
-ksharrays             off
-kshautoload           off
-kshglob               off
-kshoptionprint        off
-kshtypeset            off
-kshzerosubscript      off
-nolistambiguous       off
-nolistbeep            off
-listpacked            off
-listrowsfirst         off
-nolisttypes           off
-localloops            off
-localoptions          off
-localpatterns         off
-localtraps            off
-login                 off
-longlistjobs          off
-magicequalsubst       off
-mailwarning           off
-markdirs              off
-menucomplete          off
-monitor               on
-nomultibyte           off
-nomultifuncdef        off
-nomultios             off
-nonomatch             off
-nonotify              off
-nullglob              off
-numericglobsort       off
-octalzeroes           off
-overstrike            off
-pathdirs              off
-pathscript            off
-pipefail              off
-posixaliases          off
-posixargzero          off
-posixbuiltins         off
-posixcd               off
-posixidentifiers      off
-posixjobs             off
-posixstrings          off
-posixtraps            off
-printeightbit         off
-printexitvalue        off
-privileged            off
-promptbang            off
-nopromptcr            off
-nopromptpercent       off
-nopromptsp            off
-promptsubst           on
-pushdignoredups       off
-pushdminus            off
-pushdsilent           off
-pushdtohome           off
-rcexpandparam         off
-rcquotes              off
-norcs                 off
-recexact              off
-rematchpcre           off
-restricted            off
-rmstarsilent          off
-rmstarwait            off
-sharehistory          off
-shfileexpansion       off
-shglob                off
-shinstdin             on
-shnullcmd             off
-shoptionletters       off
-noshortloops          off
-shwordsplit           off
-singlecommand         off
-singlelinezle         off
-sourcetrace           off
-sunkeyboardhack       off
-transientrprompt      off
-trapsasync            off
-typesetsilent         off
-nounset               off
-verbose               off
-vi                    off
-warncreateglobal      off
-warnnestedvar         off
-xtrace                off
-zle                   on
+- [Parameter-Expansion-Flags](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags)
+- [14 Expansion](http://zsh.sourceforge.net/Doc/Release/Expansion.html#Expansion)
 
 
 ## Powerlevel10k
@@ -1323,3 +1073,258 @@ FILES
 
 SEE ALSO
        gitsubmodules(7), gitmodules(5).
+
+
+## Random Notes
+
+
+other apps
+
+Sample Apps:
+ - atop		# xxx Root
+ - bmon		# DONE
+ - cmatrix	# DONE
+ - dnstop	# xxx Root
+ - ethstatus
+ - glances
+ - htop
+ - ifstat
+ - iotop
+ - iptotal
+ - iptraf-ng
+ - itop
+ - jnettop
+ - kerneltop
+ - latencytop
+ - logtop
+ - netmrg
+ - nload
+ - nmon
+ - ntop
+ - powertop
+ - sagan
+ - slurm
+ - snetz
+ - top
+ - tiptop
+ - vnstat
+
+ 
+alias e='vi'
+alias egrep='grep -E'
+alias ewformat='fdformat -n /dev/fd0u1743; ewfsck'
+alias fgrep='grep -F'
+alias ftp='ncftp -d15'
+alias h='history 10'
+alias fformat='fdformat /dev/fd0H1440'
+alias j='jobs -l'
+alias ksane='setterm -reset'
+alias ls='ls -F --color=auto'
+alias m='less'
+alias md='mkdir'
+alias od='od -Ax -ta -txC'
+alias p='pstree -p'
+alias ping='ping -vc1'
+alias sb='ssh blubber'
+alias sl='ls'
+alias ss='ssh octarine'
+alias tar='gtar'
+alias tmp='cd /tmp'
+alias unaliasall='unalias -a'
+alias vi='eval `resize`;vi'
+alias vt100='export TERM=vt100'
+alias which='type'
+alias xt='xterm -bg black -fg white &'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias PAGER='less -r'
+alias Txterm='export TERM=xterm'
+#need this so that that backspace and all the usual keys work.
+alias XARGS='xargs -r'
+alias cdrecord='cdrecord -dev 0,0,0 -speed=8'
+
+
+
+set -o output
+
+noaliases             off
+aliasfuncdef          off
+allexport             off
+noalwayslastprompt    off
+alwaystoend           off
+appendcreate          off
+noappendhistory       off
+autocd                off
+autocontinue          off
+noautolist            off
+noautomenu            off
+autonamedirs          off
+noautoparamkeys       off
+noautoparamslash      off
+autopushd             off
+noautoremoveslash     off
+autoresume            off
+nobadpattern          off
+nobanghist            off
+nobareglobqual        off
+bashautolist          off
+bashrematch           off
+nobeep                off
+nobgnice              off
+braceccl              off
+bsdecho               off
+nocaseglob            off
+nocasematch           off
+cbases                off
+cdablevars            off
+chasedots             off
+chaselinks            off
+nocheckjobs           off
+noclobber             off
+combiningchars        off
+completealiases       off
+completeinword        off
+continueonerror       off
+correct               off
+correctall            off
+cprecedences          off
+cshjunkiehistory      off
+cshjunkieloops        off
+cshjunkiequotes       off
+cshnullcmd            off
+cshnullglob           off
+nodebugbeforecmd      off
+dvorak                off
+emacs                 off
+noequals              off
+errexit               off
+errreturn             off
+noevallineno          off
+noexec                off
+extendedglob          off
+extendedhistory       off
+noflowcontrol         off
+forcefloat            off
+nofunctionargzero     off
+noglob                off
+noglobalexport        off
+noglobalrcs           off
+globassign            off
+globcomplete          off
+globdots              off
+globstarshort         off
+globsubst             off
+nohashcmds            off
+nohashdirs            off
+hashexecutablesonly   off
+nohashlistall         off
+histallowclobber      off
+nohistbeep            off
+histexpiredupsfirst   off
+histfcntllock         off
+histfindnodups        off
+histignorealldups     off
+histignoredups        off
+histignorespace       off
+histlexwords          off
+histnofunctions       off
+histnostore           off
+histreduceblanks      off
+nohistsavebycopy      off
+histsavenodups        off
+histsubstpattern      off
+histverify            off
+nohup                 off
+ignorebraces          off
+ignoreclosebraces     off
+ignoreeof             off
+incappendhistory      off
+incappendhistorytime  off
+interactive           on
+interactivecomments   off
+ksharrays             off
+kshautoload           off
+kshglob               off
+kshoptionprint        off
+kshtypeset            off
+kshzerosubscript      off
+nolistambiguous       off
+nolistbeep            off
+listpacked            off
+listrowsfirst         off
+nolisttypes           off
+localloops            off
+localoptions          off
+localpatterns         off
+localtraps            off
+login                 off
+longlistjobs          off
+magicequalsubst       off
+mailwarning           off
+markdirs              off
+menucomplete          off
+monitor               on
+nomultibyte           off
+nomultifuncdef        off
+nomultios             off
+nonomatch             off
+nonotify              off
+nullglob              off
+numericglobsort       off
+octalzeroes           off
+overstrike            off
+pathdirs              off
+pathscript            off
+pipefail              off
+posixaliases          off
+posixargzero          off
+posixbuiltins         off
+posixcd               off
+posixidentifiers      off
+posixjobs             off
+posixstrings          off
+posixtraps            off
+printeightbit         off
+printexitvalue        off
+privileged            off
+promptbang            off
+nopromptcr            off
+nopromptpercent       off
+nopromptsp            off
+promptsubst           on
+pushdignoredups       off
+pushdminus            off
+pushdsilent           off
+pushdtohome           off
+rcexpandparam         off
+rcquotes              off
+norcs                 off
+recexact              off
+rematchpcre           off
+restricted            off
+rmstarsilent          off
+rmstarwait            off
+sharehistory          off
+shfileexpansion       off
+shglob                off
+shinstdin             on
+shnullcmd             off
+shoptionletters       off
+noshortloops          off
+shwordsplit           off
+singlecommand         off
+singlelinezle         off
+sourcetrace           off
+sunkeyboardhack       off
+transientrprompt      off
+trapsasync            off
+typesetsilent         off
+nounset               off
+verbose               off
+vi                    off
+warncreateglobal      off
+warnnestedvar         off
+xtrace                off
+zle                   on
+
