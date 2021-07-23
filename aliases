@@ -5,44 +5,39 @@ alias sagi='sudo apt-get install'
 alias sagu='sudo apt-get update'
 alias sas='sudo apt search'
 
-alias lc='colorls -laC --sd'
-alias ld='colorls -d --sd'
-alias lda='colorls -da --sd'
-alias lld='colorls -ladh --sd'
-
-alias lf='colorls -lf'
-alias lfa='colorls -lfa'
-
-alias ll='colorls -lah --sd'
-alias la='colorls -ah --sd'
-alias l='colorls --sd'
-alias lc='colorls -laC --sd'
 
 alias cd..='cd ..'
 alias cd...='cd ../..'
 alias cd....='cd ../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias pd=pushd
 alias ud=popd
-alias ll="ls -lsFup --color=yes"
 alias sagi='sudo apt-get install'
 alias sas='sudo apt search'
 
-alias lf='colorls -lf'
-alias lfa='colorls -lfa'
-
-alias ll='colorls -lah --sd'
-alias la='colorls -a --sd'
-alias l='colorls --sd'
-alias lc='colorls -laC --sd'
 
 alias cd..='cd ..'
-alias l='ls -alg'
 alias ren='mv \!:1 \!:2'
 alias s='sudo'
-alias lsa='ls -ahNst --color'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias chmod='chmod -v'
+
+on cs() { curl -m 7 "http://cheat.sh/$1"; }
+
+#alias log="tail /var/log/syslog"
+alias log='tail -20 /var/log/syslog | tac | ccat -G Decimal="blue" -G Punctuation="darkgreen" -G Type="darkgray"'
+alias llg="tac /var/log/syslog  | less"
+alias clr="clear"
+alias c=clear
+alias ip='ip -c'
+alias lir="ls -liR"
+alias cat=ccat
+alias docker-compose='docker run --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v "$PWD:$PWD" \
+    -w="$PWD" \
+    docker/compose:latest'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -55,6 +50,12 @@ if [ -x /usr/bin/dircolors ]; then
 	alias fgrep='fgrep --color=auto'
 	alias egrep='egrep --color=auto'
 fi
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
 #make sure this exists before going all in
 
 ## note this doesnt work
@@ -71,3 +72,73 @@ if [[ -x $(which mvg) ]]; then alias cp '/usr/local/bin/mvg -g'; fi;
 # alias mv '/usr/local/bin/advmv -g'
 # alias mv '/usr/local/bin/mvg -g'
 if [[ -x $(which ccat) ]]; then alias cat '/usr/local/bin/ccat'; fi;
+
+
+
+if [ -x /usr/bin/colorls ]; then
+	alias l='colorls --sd'
+	alias la='colorls -ah --sd'
+	alias lc='colorls -laC --sd'
+	alias ld='colorls -d --sd'
+	alias lda='colorls -da --sd'
+	alias lf='colorls -lf'
+	alias lfa='colorls -lfa'
+	alias ll='colorls -lah --sd'
+	alias lld='colorls -ladh --sd'
+else; 
+	#alias l='ls -alg'
+	#alias l='ls -CF'
+	# alias l='ls -algCF'
+	alias l='ls -alFh'     #size,show type,human readable
+	# alias la='ls -A'
+	alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+	alias lart='ls -1Fcart'
+	alias ld='ls -ld --colors=always'
+	alias ldot='ls -ld .*'
+	# alias ll='ls -alF'
+	# alias ll='ls -l'      #long list
+	# alias ll="ls -lsFup --color=yes"
+	alias ll="ls -alsFup --color=yes"
+	alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+	alias lrt='ls -1Fcrt'
+	alias lS='ls -1FSsh'
+	alias lsa='ls -ahNst --color'
+	alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+fi;
+
+
+
+##! FROM AN EXTERNAL SOURCE BELOW
+alias e='micro'
+alias fgrep='grep -F'
+alias egrep='grep -E'
+alias h='history 10'
+alias j='jobs -l'
+
+alias ewformat='fdformat -n /dev/fd0u1743; ewfsck'
+alias ftp='ncftp -d15'
+alias fformat='fdformat /dev/fd0H1440'
+alias ksane='setterm -reset'
+# alias ls='ls -F --color=auto'
+# alias m='less'
+alias md='mkdir'
+alias od='od -Ax -ta -txC'
+alias p='pstree -p'
+alias ping='ping -vc1'
+alias sb='ssh blubber'
+alias sl='ls'
+alias ss='ssh octarine'
+alias tar='gtar'
+alias tmp='cd /tmp'
+alias unaliasall='unalias -a'
+alias vi='eval `resize`;vi'
+# alias vt100='export TERM=vt100'
+alias which='type'
+alias xt='xterm -bg black -fg white &'
+
+alias PAGER='less -r'
+alias Txterm='export TERM=xterm'
+#need this so that that backspace and all the usual keys work.
+alias XARGS='xargs -r'
+alias cdrecord='cdrecord -dev 0,0,0 -speed=8'
+

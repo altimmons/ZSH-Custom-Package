@@ -90,6 +90,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias PAGER='less -r'
 alias Txterm='export TERM=xterm'
+#need this so that that backspace and all the usual keys work.
 alias XARGS='xargs -r'
 alias cdrecord='cdrecord -dev 0,0,0 -speed=8'
 

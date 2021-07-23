@@ -23,15 +23,19 @@
 #      not when opening.
 
 
-#make Capslock == escape
-echo -e "$(dumpkeys | grep ^keymaps)\nkeycode 58 = Escape" | loadkeys
-(sudo) setleds -v -D num
+# #make Capslock == escape
+# echo -e "$(dumpkeys | grep ^keymaps)\nkeycode 58 = Escape" | loadkeys
+# (sudo) setleds -v -D num
 
-# or 
-# Turn Numlock on for the TTYs:
-for tty in /dev/tty[1-6]; do
-    /usr/bin/setleds -D +num < $tty
-done
+# # or 
+# # Turn Numlock on for the TTYs:
+# for tty in /dev/tty[1-6]; do
+#     /usr/bin/setleds -D +num < $tty
+# done
+
+#append our rc.local with the system rc.local.
+cat ./rc.local >> /etc/rc.local
+
 
 # One way to guarantee that numlock will be turned on after bootup for the TTYs is to run setleds via rc.local (a script run after every runlevel change; which in particular runs after booting up). To do so add something similar to the following in the file /etc/rc.local:
 
