@@ -1,10 +1,39 @@
 #! /bin/zsh
 # This is a log of the actions that occured, more than a script.
 
-.zshenv
-.zshrc
-.zprofile
-.zlogin
+# .zshenv .zshrc  .zprofile  .zlogin .zlogout https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+
+
+# since .zshenv is always sourced, it often contains exported variables that should be 
+#       available to other programs. For example, $PATH, $EDITOR, and $PAGER are often
+#        set in .zshenv. Also, you can set $ZDOTDIR in .zshenv to specify an alternative
+#        location for the rest of your zsh
+#.zprofile is basically the same as .zlogin except that it's sourced before .zshrc while
+#      .zlogin is sourced after .zshrc. According to the zsh documentation, ".zprofile 
+#      is meant as an alternative to .zlogin for ksh fans; the two are not intended to
+#       be used together, although this could certainly be done if desired."
+# .zshrc is for interactive shell configuration. You set options for the interactive
+#      shell there with the setopt and unsetopt commands. You can also load shell modules, 
+#      set your history options, change your prompt, set up zle and completion, et cetera. 
+#      You also set any variables that are only used in the interactive shell (e.g. $LS_COLORS).
+# .zlogin is sourced on the start of a login shell but after .zshrc if the shell is also
+#      interactive. This file is often used to start X using startx. Some systems start
+#      X on boot, so this file is not always very useful.
+# .zlogout is sometimes used to clear and reset the terminal. It is called when exiting, 
+#      not when opening.
+
+
+#make Capslock == escape
+echo -e "$(dumpkeys | grep ^keymaps)\nkeycode 58 = Escape" | loadkeys
+(sudo) setleds -v -D num
+
+# or 
+# Turn Numlock on for the TTYs:
+for tty in /dev/tty[1-6]; do
+    /usr/bin/setleds -D +num < $tty
+done
+
+# One way to guarantee that numlock will be turned on after bootup for the TTYs is to run setleds via rc.local (a script run after every runlevel change; which in particular runs after booting up). To do so add something similar to the following in the file /etc/rc.local:
 
 #todo update this project.
 git clone --recurse-submodules https://github.com/chaconinc/MainProject

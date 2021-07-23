@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+#link to or append to /etc/rc.local
+
+setleds -v -D num
+## Turn Numlock on for the TTYs:
+for tty in /dev/tty[1-6]; do
+    /usr/bin/setleds -D +num < $tty
+done
+
+
+echo -e "$(dumpkeys | grep ^keymaps)\nkeycode 58 = Escape" | loadkeys
