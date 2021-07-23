@@ -4,16 +4,16 @@
 ------
 To Do
 -------
-[] todo move mpg and cpg to .assets
-[] add fonts to .assets
-[] get fzf working
-[] add bat
-[] fix nnn
-[] clean setup script (new script) excl. things from repo.
-[] clean all files.
-[] checkout highlight http://www.andre-simon.de/doku/highlight/en/install.php
-[] checkout https://github.com/romkatv/zsh4humans
-[] why was zsh-syntax-highlighting index deleted? Do I need to care?
+- [] todo move mpg and cpg to .assets
+- [] add fonts to .assets
+- [] get fzf working
+- [] add bat
+- [] fix nnn
+- [] clean setup script (new script) excl. things from repo.
+- [] clean all files.
+- [] checkout highlight http://www.andre-simon.de/doku/highlight/en/install.php
+- [] checkout https://github.com/romkatv/zsh4humans
+- [] why was zsh-syntax-highlighting index deleted? Do I need to care?
 
 
 
@@ -1081,6 +1081,7 @@ SEE ALSO
 other apps
 
 Sample Apps:
+
  - atop		# xxx Root
  - bmon		# DONE
  - cmatrix	# DONE
@@ -1109,7 +1110,7 @@ Sample Apps:
  - tiptop
  - vnstat
 
- 
+```
 alias e='vi'
 alias egrep='grep -E'
 alias ewformat='fdformat -n /dev/fd0u1743; ewfsck'
@@ -1143,8 +1144,9 @@ alias Txterm='export TERM=xterm'
 #need this so that that backspace and all the usual keys work.
 alias XARGS='xargs -r'
 alias cdrecord='cdrecord -dev 0,0,0 -speed=8'
+```
 
-
+```
 
 set -o output
 
@@ -1328,3 +1330,4 @@ warnnestedvar         off
 xtrace                off
 zle                   on
 
+```
