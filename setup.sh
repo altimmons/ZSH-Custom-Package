@@ -23,24 +23,13 @@
 #      not when opening.
 
 
-# #make Capslock == escape
-# echo -e "$(dumpkeys | grep ^keymaps)\nkeycode 58 = Escape" | loadkeys
-# (sudo) setleds -v -D num
 
-# # or 
-# # Turn Numlock on for the TTYs:
-# for tty in /dev/tty[1-6]; do
-#     /usr/bin/setleds -D +num < $tty
-# done
-
-#append our rc.local with the system rc.local.
-cat ./rc.local >> /etc/rc.local
-
-
-# One way to guarantee that numlock will be turned on after bootup for the TTYs is to run setleds via rc.local (a script run after every runlevel change; which in particular runs after booting up). To do so add something similar to the following in the file /etc/rc.local:
 
 #todo update this project.
-git clone --recurse-submodules https://github.com/chaconinc/MainProject
+#git clone --recurse-submodules https://github.com/chaconinc/MainProject
+#! what is this?? deadlink
+
+
 
 #======================Dependencies Install
 #++
@@ -64,11 +53,6 @@ git clone --recurse-submodules https://github.com/chaconinc/MainProject
 # |libgnutls28-dev  | required by                                   | 
 # |uuid-dev         | required by                                   | 
 # |build-essential  | required by   all the things that need building| 
-
-$com=function($str){return '';};
-
-function com($str){return '';};
-
 
 ##!optional list of useful software
 #apt install atop bmon cmatrix dnstop ethstatus glances htop ifstat iotop iptotal iptraf-ng itop jnettop kerneltop latencytop logtop netmrg nload nmon ntop powertop sagan slurm snetz top tiptop vnstat
@@ -177,6 +161,10 @@ git submodule add https://github.com/bigH/auto-sized-fzf.git $ZSH_CUSTOM/.fzf-au
 git submodule add --depth=1 https://github.com/romkatv/powerlevel10k.git  p10k
 ###############
 git submodule add --depth=1 https://github.com/dustinkirkland/byobu.git ./byobu
+
+git submodule add --depth=1 https://github.com/ajeetdsouza/zoxide.git ./zoxide
+
+curl -sS https://webinstall.dev/zoxide | bash
 :<<BYOBU_INSTRUCTIONS
 	Configure:
 

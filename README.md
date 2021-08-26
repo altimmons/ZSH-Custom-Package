@@ -40,6 +40,7 @@ _____
 - https://timewarrior.net/
 - https://github.com/zsh-users/antigen/wiki/Commands
 - https://github.com/romkatv/powerlevel10k#manual
+- https://github.com/ajeetdsouza/zoxide
 - A custom terminal configuration
 - jarun_nnn_ n³ The unorthodox terminal file manager.html https://github.com/jarun/nnn
 - https://github.com/jarun/advcpmv
@@ -51,6 +52,37 @@ _____
 
 FZF_COMPLETION_OPTS
 fzf_default_completion
+
+
+## Numlock
+
+```sh
+# #make Capslock == escape
+# echo -e "$(dumpkeys | grep ^keymaps)\nkeycode 58 = Escape" | loadkeys
+# (sudo) setleds -v -D num
+
+# # or 
+# # Turn Numlock on for the TTYs:
+# for tty in /dev/tty[1-6]; do
+#     /usr/bin/setleds -D +num < $tty
+# done
+
+#append our rc.local with the system rc.local.
+cat ./rc.local >> /etc/rc.local
+
+
+# One way to guarantee that numlock will be turned on after bootup for the TTYs is to run setleds via rc.local (a script run after every runlevel change; which in particular runs after booting up). To do so add something similar to the following in the file /etc/rc.local:
+```
+
+## Random notes
+
+```sh
+#! IDK what this is either - example function def?
+$com=function($str){return '';};
+
+#! IDK what this is either - example function def?
+function com($str){return '';};
+```
 
 
 ## Aliases 
